@@ -1,14 +1,17 @@
 const express = require('express');
-const pathUtil = require('../util/path');
 
 const router = express.Router();
 
-// /admin/add-product => GET
+// /add-product => GET
 router.get('/add-product', (req, res, next) => {
-  res.sendFile(pathUtil.views + 'add-product.html');
+  res.render('add-product', {
+    pageTitle: 'Add Products',
+    path: 'add-product'
+  });
+
 });
 
-// /admin/add-product => POST
+// /add-product => POST
 router.post('/add-product', (req, res, next) => {
   console.log(req.body);
   res.redirect('/');
