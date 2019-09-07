@@ -1,14 +1,14 @@
 {
-  "name": "nodejs-complete-guide",
+  "name": "it114p-webdev-franz",
   "version": "1.0.0",
-  "description": "Complete Node.js Guide",
+  "description": "it114p-webdev-franz",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
     "start-server": "node app.js"
   },
-  "author": "Maximilian Schwarzmüller",
+  "author": "Payawal, Franz Gian S.",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^1.19.1"
@@ -18,5 +18,13 @@
     "ejs": "^2.6.2",
     "express": "^4.16.3",
     "mysql2": "^1.7.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raz0r029/it114p-webdev-franz.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Raz0r029/it114p-webdev-franz/issues"
+  },
+  "homepage": "https://github.com/Raz0r029/it114p-webdev-franz#readme"
 }
