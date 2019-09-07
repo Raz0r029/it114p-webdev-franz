@@ -1,6 +1,6 @@
 const express = require('express');
+const path = require('path');
 const bodyParser = require('body-parser');
-const pathUtil = require('./util/path')
 const app = express();
 app.set('view engine', 'ejs');
 const adminRoutes = require('./routes/admin');
@@ -9,7 +9,7 @@ const errorController = require('./controller/error');
 app.use(bodyParser.urlencoded({
     extended: false
 }));
-app.use(express.static(pathUtil.public));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(adminRoutes);
 app.use(shopRoutes);
 
