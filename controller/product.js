@@ -7,10 +7,10 @@ exports.getAddProduct = (req, res, next) => {
   });
 };
 
-exports.postAddProduct = (req, res, next) => {
-  const product = new Product(req.body.title);
-  product.save();
-  res.redirect('/');
-};
-
-
+exports.addProduct = (req, res, next) => {
+  console.log(req.body);
+  const product = new Product(null, req.body.title, req.body.image_url, req.body.description, req.body.price);
+  product.save().then(() => {
+    res.redirect('/');
+  }).catch(err => console.log(err));
+}
