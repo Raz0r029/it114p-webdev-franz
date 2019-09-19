@@ -3,13 +3,16 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const app = express();
 app.set('view engine', 'ejs');
+const errorController = require('./controller/error');
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
-const errorController = require('./controller/error');
-app.use(bodyParser.urlencoded({
-    extended: false
-}));
+
+app.use(bodyParser.urlencoded({ extended: false }));
+
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/css', express.static(path.join(__dirname, 'node_modules/bulma/css')));
+app.use('/fonts', express.static(path.join(__dirname, 'node_modules/@mdi/font/fonts')));
+
 app.use(adminRoutes);
 app.use(shopRoutes);
 
