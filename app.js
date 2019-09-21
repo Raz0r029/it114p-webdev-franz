@@ -11,7 +11,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/css', express.static(path.join(__dirname, 'node_modules/bulma/css')));
+app.use('/css', express.static(path.join(__dirname, 'node_modules/@mdi/font/css')));
 app.use('/fonts', express.static(path.join(__dirname, 'node_modules/@mdi/font/fonts')));
+app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')));
 
 app.use(adminRoutes);
 app.use(shopRoutes);
