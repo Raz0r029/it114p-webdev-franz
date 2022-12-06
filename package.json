@@ -15,10 +15,10 @@
   },
   "dependencies": {
     "@mdi/font": "^4.4.95",
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.20.1",
     "bulma": "^0.7.5",
     "ejs": "^2.6.2",
-    "express": "^4.16.3",
+    "express": "^4.18.2",
     "jquery": "^3.4.1",
     "mysql2": "^1.7.0"
   },
